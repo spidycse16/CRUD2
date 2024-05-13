@@ -28,7 +28,7 @@ class CrudController extends Controller
                 echo "Name cannot be empty";
             }
             if ($email == null) {
-                echo "Email field cannot be empty";
+                echo "Emil cannot be empty";
             }
         }
         if ($name) {
@@ -37,6 +37,7 @@ class CrudController extends Controller
                 echo $ErrMsg;
             }
             else
+            
             $flag++;
         }
         if ($email) {

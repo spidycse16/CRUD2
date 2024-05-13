@@ -16,6 +16,7 @@
         @if(Session:: has('msg'))
         <p class="alert alert-success">{{Session::get('msg')}}</p>
         @endif
+        
         <form method="POST" action="/store-data">
             @csrf
             <div class="form-group">
