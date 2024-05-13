@@ -14,7 +14,10 @@
     <div class="container">
         <a href="/" class="btn btn-dark mt-3" > SHow data</a>
        
+        @if (Session::has('msg'))
+        <p class="alert alert-danger">{{Session::get('msg')}}</p>
         
+        @endif
         <form method="POST" action="/store-data">
             @csrf
             <div class="form-group">

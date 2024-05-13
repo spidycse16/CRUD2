@@ -33,7 +33,7 @@
         <td>{{$data->email}}</td>
         <td>
             <a href="{{url('/edit-data/'.$data->id)}}" class="btn btn-success">Edit</a>
-            <a href="" class="btn btn-dark">Detle</a>
+            <a href="{{url('/delete-data/'.$data->id)}}" class="btn btn-danger">Delete</a>
         </td>
     </tr>
     
