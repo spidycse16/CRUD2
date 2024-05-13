@@ -31,9 +31,10 @@ class CrudController extends Controller
         $sql="delete from cruds where id=$id";
         $result=mysqli_query($conn,$sql);
         if($result)
-        echo"Values deleleted succesfully";
-    else
-    echo"Unable to delete data";
+        {
+            Session::flash('msg','Values deleted successfully');
+            return redirect('/');
+        }
 return redirect('/');
     }
     public function updateData(Request $request,$id)
