@@ -13,9 +13,7 @@
   <body>
     <div class="container">
         <a href="/" class="btn btn-dark mt-3" > SHow data</a>
-        @if(Session:: has('msg'))
-        <p class="alert alert-success">{{Session::get('msg')}}</p>
-        @endif
+       
         
         <form method="POST" action="/store-data">
             @csrf
@@ -32,7 +30,7 @@
                 </label>
                 <input type="text" class="form-control" name="email" placeholder="Please enter your Email">
             </div>
-            <input type="submit" class="btn btn-dark mt-4" value="submit">
+            <input type="submit" class="btn btn-dark mt-4" value="submit" action="/">
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -10,7 +10,8 @@ class CrudController extends Controller
 {
     public function showData()
     {
-        return view('show_data');
+        $show=crud::all();
+        return view('show_data',compact('show'));
     }
 
     public function addData()
@@ -68,7 +69,7 @@ class CrudController extends Controller
         $crud->save();
 
         Session::flash('msg','Data successfully added');
-        return redirect()->back();
+        return redirect('/');
     }
     }
 }
