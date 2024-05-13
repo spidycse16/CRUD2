@@ -19,17 +19,22 @@
     <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">id</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
     @foreach ($show as $key=>$data)
     <tr>
-        <td>{{$key+1}}</td>
+        <td>{{$data->id}}</td>
         <td>{{$data->name}}</td>
         <td>{{$data->email}}</td>
+        <td>
+            <a href="{{url('/edit-data/'.$data->id)}}" class="btn btn-success">Edit</a>
+            <a href="" class="btn btn-dark">Detle</a>
+        </td>
     </tr>
     
     @endforeach  
